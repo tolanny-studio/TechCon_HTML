@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>TechCon 2024 conference</h1>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./schedule.html">Schedule</a></li>
+        <li><a href="./register.html">Register</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nemo eos quae vero veniam cupiditate natus, expedita voluptates molestiae quasi at necessitatibus iusto provident iste tempore hic culpa ea dolore?</p>
+
+      <!-- Accessible embedded promotional video -->
+<figure>
+  <!-- Visible description for screen-reader and sighted users -->
+  <figcaption id="promo-desc">
+    Promotional video for Product X — 90-second overview highlighting features, pricing, and a call to action.
+    If you need a full transcript or an audio-described version, use the links below.
+  </figcaption>
+
+  <video
+    id="promo-video"
+    class="promo-video"
+    controls
+    preload="metadata"
+    poster="poster-image.jpg"
+    width="960"
+    height="540"
+    aria-describedby="promo-desc"
+    aria-label="Product X promotional video (90 seconds). Includes captions and audio description."
+  >
+    <!-- Multiple formats for broader browser support -->
+    <source src="promo-video.mp4" type="video/mp4" />
+    <source src="promo-video.webm" type="video/webm" />
+    <source src="promo-video.ogv" type="video/ogg" />
+
+    <!-- Captions (visible subtitles for people who are deaf or hard of hearing) -->
+    <track
+      kind="captions"
+      label="English captions"
+      srclang="en"
+      src="captions-en.vtt"
+      default
+    />
+
+    <!-- Subtitles in another language -->
+    <track
+      kind="subtitles"
+      label="Español (subtitles)"
+      srclang="es"
+      src="subtitles-es.vtt"
+    />
+
+    <!-- Audio descriptions for people who are blind or low-vision -->
+    <track
+      kind="descriptions"
+      label="English audio descriptions"
+      srclang="en"
+      src="descriptions-en.vtt"
+    />
+
+    <!-- Chapters (optional): lets users jump to sections -->
+    <track
+      kind="chapters"
+      label="Chapters"
+      srclang="en"
+      src="chapters.vtt"
+    />
+
+    <!-- Fallback text if the browser doesn't support <video> -->
+    Your browser does not support embedded video. You can
+    <a href="promo-video.mp4">download the MP4</a> or read the
+    <a href="promo-transcript.txt">full transcript</a>.
+  </video>
+
+  <!-- Additional accessibility resources for users -->
+  <p>
+    <a href="promo-transcript.txt">View full transcript</a> |
+    <a href="promo-audio-desc.mp3">Download audio-described MP3</a>
+  </p>
+</figure>
+
+    </section>
+  </main>
+  <footer>
+    <p>copyright 2025</p>
+  </footer>
+</body>
+</html>
